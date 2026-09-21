@@ -2,10 +2,8 @@ CREATE DATABASE AirlineDB;
 
 USE AirlineDB;
 
-
--- ========================================
 -- 1. CUSTOMER
--- ========================================
+
 
 CREATE TABLE Customer (
     customer_id INT PRIMARY KEY,
@@ -14,9 +12,8 @@ CREATE TABLE Customer (
 );
 
 
--- ========================================
 -- 2. AIRPORT
--- ========================================
+
 
 CREATE TABLE Airport (
     airport_code VARCHAR(10) PRIMARY KEY,
@@ -26,9 +23,8 @@ CREATE TABLE Airport (
 );
 
 
--- ========================================
 -- 3. AIRPLANE TYPE
--- ========================================
+
 
 CREATE TABLE Airplane_Type (
     type_name VARCHAR(50) PRIMARY KEY,
@@ -37,9 +33,9 @@ CREATE TABLE Airplane_Type (
 );
 
 
--- ========================================
+
 -- 4. FLIGHT
--- ========================================
+
 
 CREATE TABLE Flight (
     flight_id INT PRIMARY KEY,
@@ -48,9 +44,9 @@ CREATE TABLE Flight (
 );
 
 
--- ========================================
+
 -- 5. FARE
--- ========================================
+
 
 CREATE TABLE Fare (
     Code VARCHAR(20) PRIMARY KEY,
@@ -63,9 +59,8 @@ CREATE TABLE Fare (
 );
 
 
--- ========================================
 -- 6. AIRPLANE
--- ========================================
+
 
 CREATE TABLE Airplane (
     airplane_id INT PRIMARY KEY,
@@ -77,9 +72,8 @@ CREATE TABLE Airplane (
 );
 
 
--- ========================================
 -- 7. FLIGHT LEG
--- ========================================
+
 
 CREATE TABLE Flight_Leg (
     flight_id INT,
@@ -102,9 +96,8 @@ CREATE TABLE Flight_Leg (
 );
 
 
--- ========================================
 -- 8. LEG INSTANCE
--- ========================================
+
 
 CREATE TABLE Leg_Instance (
     flight_id INT,
@@ -125,9 +118,7 @@ CREATE TABLE Leg_Instance (
 );
 
 
--- ========================================
 -- 9. RESERVATION
--- ========================================
 
 CREATE TABLE Reservation (
     reservation_id INT PRIMARY KEY,
@@ -146,9 +137,8 @@ CREATE TABLE Reservation (
 );
 
 
--- ========================================
 -- 10. CAN LAND AT
--- ========================================
+
 
 CREATE TABLE Can_Land_At (
     type_name VARCHAR(50),

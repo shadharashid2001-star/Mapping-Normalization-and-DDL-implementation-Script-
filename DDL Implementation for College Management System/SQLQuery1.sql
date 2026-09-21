@@ -3,7 +3,6 @@ CREATE DATABASE UniversityDB;
 USE UniversityDB;
 
 
--- =========================================
 -- 1. DEPARTMENT TABLE
 
 
@@ -13,7 +12,6 @@ CREATE TABLE Department (
 );
 
 
--- =========================================
 -- 2. FACULTY TABLE
 
 CREATE TABLE Faculty (
@@ -28,7 +26,6 @@ CREATE TABLE Faculty (
 );
 
 
--- =========================================
 -- 3. HOSTEL TABLE
 
 
@@ -43,7 +40,7 @@ CREATE TABLE Hostel (
 );
 
 
--- =========================================
+
 -- 4. STUDENT TABLE
 
 
@@ -64,7 +61,6 @@ CREATE TABLE Student (
 );
 
 
--- =========================================
 -- 5. SUBJECT TABLE
 
 
@@ -78,7 +74,6 @@ CREATE TABLE Subject (
 );
 
 
--- =========================================
 -- 6. COURSE TABLE
 
 
@@ -93,7 +88,7 @@ CREATE TABLE Course (
 );
 
 
--- =========================================
+
 -- 7. EXAM TABLE
 
 
@@ -109,9 +104,8 @@ CREATE TABLE Exam (
 );
 
 
--- =========================================
 -- 8. ENROLLS TABLE
--- Student ↔ Course
+
 
 
 CREATE TABLE Enrolls (
@@ -128,9 +122,8 @@ CREATE TABLE Enrolls (
 );
 
 
--- =========================================
 -- 9. TAKES TABLE
--- Student ↔ Subject
+
 
 
 CREATE TABLE Takes (
@@ -147,9 +140,8 @@ CREATE TABLE Takes (
 );
 
 
--- =========================================
 -- 10. TAKES_EXAM TABLE
--- Student ↔ Exam
+
 
 
 CREATE TABLE Takes_Exam (

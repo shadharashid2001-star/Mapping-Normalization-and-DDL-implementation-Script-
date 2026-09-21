@@ -1,16 +1,15 @@
--- =============================================
+
 -- Q3 - HOSPITAL / CLINIC SYSTEM
--- DDL IMPLEMENTATION
--- =============================================
+
 
 CREATE DATABASE HospitalDB;
 
 USE HospitalDB;
 
 
--- =============================================
+
 -- 1. PATIENT
--- =============================================
+
 
 CREATE TABLE Patient (
     patient_id INT PRIMARY KEY,
@@ -22,10 +21,8 @@ CREATE TABLE Patient (
 );
 
 
--- =============================================
 -- 2. PATIENT_PHONE
--- Multivalued Phone attribute
--- =============================================
+
 
 CREATE TABLE Patient_Phone (
     patient_id INT,
@@ -38,9 +35,9 @@ CREATE TABLE Patient_Phone (
 );
 
 
--- =============================================
+
 -- 3. DEPARTMENT
--- =============================================
+
 
 CREATE TABLE Department (
     department_id INT PRIMARY KEY,
@@ -48,9 +45,9 @@ CREATE TABLE Department (
 );
 
 
--- =============================================
+
 -- 4. DOCTOR
--- =============================================
+
 
 CREATE TABLE Doctor (
     doctor_id INT PRIMARY KEY,
@@ -64,10 +61,9 @@ CREATE TABLE Doctor (
 );
 
 
--- =============================================
 -- HEADS RELATIONSHIP
 -- One Doctor can head a Department
--- =============================================
+
 
 ALTER TABLE Department
 ADD head_doctor_id INT;
@@ -78,9 +74,9 @@ FOREIGN KEY (head_doctor_id)
 REFERENCES Doctor(doctor_id);
 
 
--- =============================================
+
 -- 5. APPOINTMENT
--- =============================================
+
 
 CREATE TABLE Appointment (
     appointment_id INT PRIMARY KEY,
@@ -99,9 +95,9 @@ CREATE TABLE Appointment (
 );
 
 
--- =============================================
+
 -- 6. SERVICE
--- =============================================
+
 
 CREATE TABLE Service (
     service_id INT PRIMARY KEY,
@@ -111,11 +107,11 @@ CREATE TABLE Service (
 );
 
 
--- =============================================
+
 -- 7. APPOINTMENT_SERVICE
 -- M:N relationship between
 -- APPOINTMENT and SERVICE
--- =============================================
+
 
 CREATE TABLE Appointment_Service (
     appointment_id INT,
@@ -133,9 +129,8 @@ CREATE TABLE Appointment_Service (
 );
 
 
--- =============================================
+
 -- 8. SERVICE_PRICE_HISTORY
--- =============================================
 
 CREATE TABLE Service_Price_History (
     price_history_id INT PRIMARY KEY,
@@ -149,9 +144,9 @@ CREATE TABLE Service_Price_History (
 );
 
 
--- =============================================
+
 -- 9. MEDICAL_RECORD
--- =============================================
+
 
 CREATE TABLE Medical_Record (
     record_id INT PRIMARY KEY,
@@ -174,7 +169,7 @@ CREATE TABLE Medical_Record (
 
 
 -- 10. BILLING
--- =============================================
+
 
 CREATE TABLE Billing (
     bill_id INT PRIMARY KEY,
@@ -187,7 +182,7 @@ CREATE TABLE Billing (
 );
 
 
--- =============================================
+
 -- 11. PAYMENT
 
 
