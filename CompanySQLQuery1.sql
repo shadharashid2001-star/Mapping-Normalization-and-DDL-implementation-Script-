@@ -1,5 +1,6 @@
 CREATE DATABASE CompanyDB;
 USE CompanyDB;
+
 CREATE TABLE EMPLOYEE (
     SSN           VARCHAR(9) PRIMARY KEY,
     Fname         VARCHAR(50)  NOT NULL,
